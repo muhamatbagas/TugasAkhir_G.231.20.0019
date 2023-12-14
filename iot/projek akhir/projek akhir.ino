@@ -14,14 +14,14 @@ DHT dht(DHTPIN, DHTTYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Connect to the WiFi
-const char* ssid = "Redmi9T";
-const char* password = "12345678";
+const char* ssid = "pemkot.smg";
+const char* password = "tidakbisa";
 const char* mqtt_server = "riset.revolusi-it.com";
 const char* user_mqtt="usm";
 const char* pass_mqtt="rahasia234";
 
 // const char* mqtt_server = "riset.revolusi-it.com";
-const char* topik = "iot/G.231.20.0019";
+const char* topik = "iot/G.231.20.0116";
 
 int stat_D0,stat_D1,stat_D2,stat_D3,stat_D4,stat_D5,stat_D6,stat_D7,stat_D8; 
  
@@ -68,7 +68,7 @@ void reconnect() {
  while (!client.connected()) {
  Serial.print("Menghubungkan diri ke MQTT Server : "+(String)mqtt_server);
  // Attempt to connect
- if (client.connect("G.231.20.0019",user_mqtt,pass_mqtt)) {
+ if (client.connect("G.231.20.0116",user_mqtt,pass_mqtt)) {
   Serial.println("connected");
   // ... and subscribe to topic
   client.subscribe(topik);
